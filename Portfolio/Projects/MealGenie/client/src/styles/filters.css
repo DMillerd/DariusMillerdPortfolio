@@ -1,0 +1,129 @@
+/* Toggle button - fixed in the top right corner */
+.menu-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1002; 
+  color: var(--accent-color);
+}
+
+/* Container for all filter section tabs */
+.filter-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Individual navigation tabs for each filter category */
+.filter-section-tab {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease; /* Smooth hover transitions */
+  gap: 12px;
+  color: var(--text-color);
+}
+
+/* Active/selected navigation tab styling */
+.filter-section-tab.active {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Icon inside each filter section tab */
+.section-icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Container for the options within each filter category */
+.filter-options {
+  margin-bottom: 16px;
+}
+
+/* Heading for each filter options section */
+.filter-options h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* Grid layout for filter toggle buttons */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  gap: 10px;
+}
+
+/* Individual selectable filter option buttons */
+.filter-option {
+  padding: 12px 8px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  color: var(--text-color);
+}
+
+/* Selected state for regular filter options */
+.filter-option.selected {
+  background-color: #4caf50; 
+  color: white;
+}
+
+/* Special styling for selected allergy/intolerance options */
+.filter-option.intolerance-selected {
+  background-color: #f44336; 
+  color: white;
+}
+
+/* Save button with all its states */
+.save-filters-btn {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: auto; 
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Visual feedback during save operation */
+.save-filters-btn.saving {
+  background-color: #ffc107; 
+  cursor: wait;
+}
+
+/* Success state after saving */
+.save-filters-btn.saved {
+  background-color: #4caf50; 
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+  .options-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}

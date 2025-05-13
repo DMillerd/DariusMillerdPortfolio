@@ -1,0 +1,18 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: dmillerd
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: bucketlistapi
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: bucketlistapi
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  api:
+    handler: app.handler
+    events:
+      - httpApi: "*"

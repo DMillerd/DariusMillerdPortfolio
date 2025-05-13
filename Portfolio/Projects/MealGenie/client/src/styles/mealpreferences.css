@@ -1,0 +1,349 @@
+
+/* Base container styling - controls the overall layout and theme */
+.meal-preferences-container {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  min-height: 100vh; 
+  padding: 1rem;
+}
+
+/* Header section styling - page title and description */
+.preferences-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Main headline styling */
+.preferences-header h1 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Subheading description text */
+.preferences-header p {
+  font-size: 1.1rem;
+  opacity: 0.9; 
+}
+
+/* Main content layout - flexbox container for sidebar and main area */
+.preferences-content {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto; /* Center on page */
+}
+
+/* Left sidebar navigation panel */
+.preferences-nav {
+  width: 250px;
+  flex-shrink: 0; /* Prevents shrinking on small screens */
+}
+
+/* Main content area where preference options are displayed */
+.preferences-main {
+  flex-grow: 1; /* Takes up remaining space */
+  background-color: rgba(255, 255, 255, 0.05); 
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Navigation menu list container */
+.preferences-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+/* Individual navigation menu items */
+.preferences-nav li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for navigation items */
+.preferences-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Active/selected navigation item */
+.preferences-nav li.active {
+  background-color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Icon within navigation items */
+.nav-icon {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* Text label for navigation items */
+.nav-text {
+  font-size: 1rem;
+}
+
+/* Save preferences button styling */
+.save-preferences-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover state for save button */
+.save-preferences-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Saving in-progress state for save button */
+.save-preferences-btn.saving {
+  background-color: var(--secondary-color);
+  position: relative;
+  color: transparent; /* Hide text during loading */
+}
+
+/* Loading spinner animation for saving state */
+.save-preferences-btn.saving::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--accent-color); 
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+/* Success state after saving completes */
+.save-preferences-btn.saved {
+  background-color: #4caf50; /* Success green */
+  color: white;
+  position: relative;
+}
+
+/* Animations for UI elements */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); } /* Rotation for loading spinner */
+}
+
+/* Individual preference section containers */
+.preference-section {
+  margin-bottom: 2rem;
+}
+
+/* Header for each preference section */
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+/* Title for each preference section */
+.section-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--accent-color);
+}
+
+/* Icon next to section headers */
+.header-icon {
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
+}
+
+/* Description text under section headers */
+.section-description {
+  opacity: 0.8; 
+  font-size: 0.95rem;
+}
+
+/* Grid layout for preference option cards */
+.preference-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual preference toggle cards */
+.preference-card {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  border: 2px solid transparent; 
+}
+
+/* Hover effect for preference cards */
+.preference-card:hover {
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Selected state for preference cards */
+.preference-card.selected {
+  border-color: var(--accent-color);
+  background-color: rgba(212, 175, 55, 0.1); 
+}
+
+/* Special styling for selected intolerance/allergy cards */
+.preference-card.intolerance-selected {
+  border: 2px solid #e63946;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.2);
+  color: #e63946;
+}
+
+/* Icon within preference cards */
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-color);
+}
+
+/* Text label within preference cards */
+.card-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Special grid layout for meal type cards */
+.meal-types-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller cards */
+}
+
+/* Input field cards for numeric preferences */
+.input-card {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin-bottom: 1%;
+  padding: 1.2rem;
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for input cards */
+.input-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels for input fields */
+.input-card label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Input fields */
+.input-card input,
+.input-card select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Focus state for input fields */
+.input-card input:focus,
+.input-card select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color); 
+}
+
+/* Unit indicator for numeric inputs */
+.input-card .unit {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: right;
+}
+
+/* Responsive breakpoints for different screen sizes */
+/* Tablet layout adjustments */
+@media (max-width: 1024px) {
+  .preferences-content {
+    flex-direction: column; /* Stack sidebar above main content */
+  }
+  
+  .preferences-nav {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .preference-options {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Smaller cards */
+  }
+}
+
+/* Small tablet/large phone adjustments */
+@media (max-width: 768px) {
+  .meal-preferences-container {
+    padding: 1.5rem;
+  }
+  
+  .preferences-header h1 {
+    font-size: 2rem;
+  }
+  
+  .preference-options {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Even smaller cards */
+  }
+}
+
+/* Mobile phone layout adjustments */
+@media (max-width: 480px) {
+  .preference-options {
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns on small screens */
+  }
+  
+  .preference-card {
+    padding: 1rem; 
+  }
+  
+  .card-icon {
+    font-size: 1.5rem; 
+  }
+}

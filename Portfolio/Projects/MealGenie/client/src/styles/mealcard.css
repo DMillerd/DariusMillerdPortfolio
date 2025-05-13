@@ -1,0 +1,288 @@
+/* Meal Card Container */
+.meal--card {
+    width: 30vw;
+    max-height: 65vh;
+    transform-style: preserve-3d;
+ 
+}
+
+/* Front and Back of Card */
+.meal--card--front, 
+.meal--card--back {
+    position: absolute;
+    width: 30vw;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Front of Card Ind. Style */
+.meal--card--front {
+    background-color: var(--secondary-color);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 20px;
+    color: var(--primary-color);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Back of card Ind. Style */
+.meal--card--back {
+    transform: rotateY(180deg);
+    backdrop-filter: blur(10px);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    border-radius: 20px;
+    font-size: 1rem;
+    position: relative;
+    height: 100%; 
+    max-height: 65vh;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Side Header */
+.card--back--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Back Arrow Button */
+.back--button {
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end; */
+    margin: 0 auto;
+    font-size: 2rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Back Arrow Button Hover Effects */
+.back--button:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+/* Scrollable content container inside the back side */
+.meal--card--back .scrollable--content {
+    max-height: calc(100% - 80px); 
+    overflow-y: auto;
+    width: 100%;
+    padding: 10px;
+    scrollbar-width: thin;
+}
+
+.meal--card--back .scrollable--content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Image Container - Taking up most of the front card */
+.img--container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%; /* Controls how much space the image takes */
+    /* border-radius: 20px 20px 0 0; */
+    overflow: hidden;
+}
+
+/* Image Styling */
+.card--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Image overlay */
+.image--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image--overlay:hover {
+    opacity: 1;
+}
+
+/* Card Header (Title) */
+.card--header {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+}
+
+.card--header h3 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--primary-color);
+}
+
+/* View Recipe Button */
+.view--recipe {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.view--recipe:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    cursor: pointer;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Recipe Meta Information */
+.recipe-meta {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.recipe-meta svg {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+/* Hover effects for the front card */
+.meal--card--front:hover .card--img {
+    transform: scale(1.08);
+}
+
+.meal--card--front:hover .view--recipe {
+    transform: translateY(0);
+}
+
+
+.ingredients:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    cursor: pointer;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .meal--card {
+        width: 80vw;
+    }
+    
+    .meal--card--front, 
+    .meal--card--back {
+        width: 80vw;
+    }
+    
+    .card--header h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Save Recipe Button */
+.save--recipe {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    padding: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.image--overlay .save--recipe {
+    opacity: 1;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.save--recipe:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Saved state */
+.save--recipe.saved {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+/* Animation for save action */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.save--recipe.animate {
+    animation: pulse 0.5s ease;
+}
+
+/* Make save button visible even without hover */
+.img--container .save--recipe {
+    opacity: 0.8;
+}
+
+.img--container:hover .save--recipe {
+    opacity: 1;
+}
+
+/* Responsive adjustments for the save button */
+@media (max-width: 768px) {
+    .save--recipe {
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+}

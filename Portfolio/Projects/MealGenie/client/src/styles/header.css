@@ -1,0 +1,23 @@
+/* "Meal Genie" */
+.logo {
+    text-align: center;
+    font-family: "Princess Sofia", cursive;
+    font-size: 3rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    color: var(--accent-color);
+}
+
+/* Genie Lamp */
+.logo .icon {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
