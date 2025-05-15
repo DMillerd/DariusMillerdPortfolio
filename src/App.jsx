@@ -13,15 +13,15 @@ import Proficiencies from "./components/Proficiencies";
 import NotFound from "./components/NotFound";
 import Landing from "./components/Landing";
 
+
+
+
+
 function App() {
 
   return (
     <>
       <Navbar />
-      <div>
-        <h1>Darius Millerd's Portfolio</h1>
-        <p>Aspiring Full-Stack Software Engineer</p>
-      </div>
         <Routes>
           <Route path='/DariusMillerdPortfolio/' element={<Landing />}/>
           <Route path='/DariusMillerdPortfolio/home' element={<Home />}/>

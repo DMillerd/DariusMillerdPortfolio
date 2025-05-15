@@ -1,12 +1,18 @@
 .navbar-buttons {
-    padding: 15px;
+    padding: 25px;
     background-color: rgb(211, 211, 255);
+    border: 1px solid black;
 
 }
 .navbar-buttons:hover {
     transform: scale(1.1);
-    padding: 20px;
+    padding: 25px;
     background-color: rgb(164, 164, 255);
     cursor: pointer;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.8);
+    transition: .5s;
+}
+.navbar-container {
+    margin-top: 0;
+    
 }
