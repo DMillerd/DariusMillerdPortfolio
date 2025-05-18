@@ -5,7 +5,6 @@ import DariusAndToby from "../assets/DariusAndToby.png"
 const Home = () => {
 
 
-
 return (
         <div>
             <h1>Darius Millerd's Portfolio</h1>
@@ -13,7 +12,6 @@ return (
             <img className="home-photo" src={DariusAndToby} alt="Photo of Darius" />
         </div>
     );
-
 };
 
 export default Home;

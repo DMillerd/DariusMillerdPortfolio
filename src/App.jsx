@@ -11,7 +11,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Proficiencies from "./components/Proficiencies";
 import NotFound from "./components/NotFound";
-import Landing from "./components/Landing";
+// import Landing from "./components/Landing";
 
 
 
@@ -21,9 +21,12 @@ function App() {
 
   return (
     <>
+    <div className='navbar'>
       <Navbar />
+    </div>
+      <div className='routes'>
         <Routes>
-          <Route path='/' element={<Landing />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/home' element={<Home />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/experience' element={<Experience />}/>
@@ -32,8 +35,7 @@ function App() {
           <Route path='/resume' element={<Resume />}/>
           <Route path='*' element={<NotFound />}/>
         </Routes>
-
-
+      </div>
     </>
   )
 }

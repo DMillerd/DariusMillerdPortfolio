@@ -26,7 +26,6 @@ const Resume = () => {
             </ul>
         </div>
     );
-
 };
 
 export default Resume;

@@ -17,14 +17,16 @@ return (
             <li>React JS</li>
             <h4>Back End</h4>
             <li>MongoDB and mongoose</li>
-            <li>SQL</li>
+            <li>SQL & PostgreSQL</li>
             <li>AWS</li>
             <li>Github and Github pages</li>
+            <h4>Other</h4>
+            <li>Project management tools such as Trello</li>
+            <li>Testing code with Jest</li>
+            <li>Github Copilot</li>
         </ul>
-        <p>Moderate experience testing code with Jest, working with workspaces like Trello, </p>
     </div>
     );
-
 };
 
 export default Proficiencies;
