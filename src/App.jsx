@@ -23,13 +23,13 @@ function App() {
     <>
       <Navbar />
         <Routes>
-          <Route path='/DariusMillerdPortfolio/' element={<Landing />}/>
-          <Route path='/DariusMillerdPortfolio/home' element={<Home />}/>
-          <Route path='/DariusMillerdPortfolio/about' element={<About />}/>
-          <Route path='/DariusMillerdPortfolio/experience' element={<Experience />}/>
-          <Route path='/DariusMillerdPortfolio/proficiencies' element={<Proficiencies />}/>
-          <Route path='/DariusMillerdPortfolio/projects' element={<Projects />}/>
-          <Route path='/DariusMillerdPortfolio/resume' element={<Resume />}/>
+          <Route path='/' element={<Landing />}/>
+          <Route path='/home' element={<Home />}/>
+          <Route path='/about' element={<About />}/>
+          <Route path='/experience' element={<Experience />}/>
+          <Route path='/proficiencies' element={<Proficiencies />}/>
+          <Route path='/projects' element={<Projects />}/>
+          <Route path='/resume' element={<Resume />}/>
           <Route path='*' element={<NotFound />}/>
         </Routes>
 

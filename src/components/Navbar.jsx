@@ -11,17 +11,17 @@ const Navbar = () => {
 
 return (
     <div className='navbar-container'>
-        <span className="navbar-buttons"><Link to="/DariusMillerdPortfolio/home">Home</Link></span>
+        <span className="navbar-buttons"><Link to="/home">Home</Link></span>
 
-        <span className="navbar-buttons"><Link to="/DariusMillerdPortfolio/about">About</Link></span>
+        <span className="navbar-buttons"><Link to="/about">About</Link></span>
 
-        <span className="navbar-buttons"><Link to="/DariusMillerdPortfolio/experience">Experience</Link></span>
+        <span className="navbar-buttons"><Link to="/experience">Experience</Link></span>
 
-        <span className="navbar-buttons"><Link to="/DariusMillerdPortfolio/proficiencies">Proficiencies</Link></span>
+        <span className="navbar-buttons"><Link to="/proficiencies">Proficiencies</Link></span>
 
-        <span className="navbar-buttons"><Link to="/DariusMillerdPortfolio/projects">Projects</Link></span>
+        <span className="navbar-buttons"><Link to="/projects">Projects</Link></span>
 
-        <span className="navbar-buttons"><Link to="/DariusMillerdPortfolio/resume">Resume</Link></span>
+        <span className="navbar-buttons"><Link to="/resume">Resume</Link></span>
 
     </div>
     );
