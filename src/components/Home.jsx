@@ -7,7 +7,10 @@ const Home = () => {
 
 return (
         <div>
-            <h1>Darius Millerd's Portfolio</h1>
+            <div className="header-container">
+            <h1>Darius Millerd</h1>
+            <hr className="gradient-2"></hr>
+            </div>
             <p>Aspiring Full-Stack Software Engineer</p>
             <img className="home-photo" src={DariusAndToby} alt="Photo of Darius" />
         </div>

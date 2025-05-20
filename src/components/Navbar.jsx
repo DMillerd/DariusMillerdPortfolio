@@ -15,7 +15,9 @@ return (
         <span className="navbar-buttons"><Link to="/proficiencies">Proficiencies</Link></span>
         <span className="navbar-buttons"><Link to="/projects">Projects</Link></span>
         <span className="navbar-buttons"><Link to="/resume">Resume</Link></span>
+        <hr className="gradient"></hr>
     </div>
+    
     );
 };
 

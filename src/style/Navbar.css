@@ -1,10 +1,11 @@
 .navbar-buttons {
     padding: 1vw;
-    font-size: 3.5vw;
+    font-size: 3.25vw;
     /* background-color: rgb(211, 211, 255); */
     /* border: 1px solid black; */
 
 }
+
 .navbar-buttons:hover {
     transform: scale(1.1);
     padding: 1vw;
@@ -13,7 +14,19 @@
 
     transition: .5s;
 }
+
 .navbar-container {
     margin-top: 0;
-    
+
+}
+
+hr.gradient {
+    height: 4px;
+    border: none;
+    border-radius: 6px;
+    background: radial-gradient(circle,
+            rgb(71, 63, 219) 0%,
+            rgb(85, 85, 211) 21%,
+            rgb(52, 139, 231) 70%,
+            rgba(119, 255, 225, 0) 100%);
 }

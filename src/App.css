@@ -1,7 +1,8 @@
 #root {
   padding: 2rem;
   text-align: center;
-  max-width: max-content;
+  width: auto;
+  margin: 0 auto;
 }
 .routes{
   max-width: max-content;
@@ -11,7 +12,7 @@
 }
 .navbar{
   max-width: max-content;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 }

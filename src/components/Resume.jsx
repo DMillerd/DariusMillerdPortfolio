@@ -7,8 +7,10 @@ const Resume = () => {
 
     return (
         <div>
+            <div className="header-container">
             <h1>This is my Resume</h1>
-
+            <hr className="gradient-2"></hr>
+            </div>
             <ul>
                 <h2>Education</h2>
                 <li>Austin Community College
