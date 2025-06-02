@@ -13,6 +13,7 @@ return (
             </div>
             <p>Aspiring Full-Stack Software Engineer</p>
             <img className="home-photo" src={DariusAndToby} alt="Photo of Darius" />
+            {/* take new photo, maybe make a gallery. */}
         </div>
     );
 };

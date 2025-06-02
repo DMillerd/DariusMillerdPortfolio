@@ -69,6 +69,12 @@ font-size: 2vw;
 li {
 font-size: 1.4vw;
 }
+ul{
+  list-style-position: inside;
+  text-align: left;
+  max-width: fit-content;
+  margin: 0 auto;
+}
 .home-photo {
   border-radius: 25px;
   max-width: 100%;
@@ -86,34 +92,52 @@ hr.gradient-2 {
             rgb(71, 63, 219) 0%,
             rgba(111, 173, 197, 0) 100%);
 }
+hr.gradient-3 {
+    height: 3px;
+    border: none;
+    border-radius: 6px;
+    width: auto;
+    background: radial-gradient(circle, 
+            rgb(178, 252, 255) 0%,
+            rgba(111, 173, 197, 0) 100%);
+}
 .header-container {
   margin: auto;
   width: fit-content
 }
+.demovideo {
+  border: 2px solid #ddd;
+  max-width: fit-content;
+  padding: 2%;
+  margin: 0 auto;
+}
 
 
+/* 
 
+*/
 @media (prefers-color-scheme: light) {
   :root {
-    color: #0d161d;
-    background: #B1C5EE;
-    background: radial-gradient(circle, rgba(177, 197, 238, 1) 0%, rgb(101, 156, 201) 70%, rgba(83, 173, 237, 1) 100%);  
+    color: #b1c5ee;
+    background-color: #0d161d;  
+        /* background: radial-gradient(circle, rgb(103, 127, 168) 0%, rgb(94, 140, 175) 70%, rgb(80, 163, 218) 100%);   */
     /* background for whole page */
   }
   a{
-      color:rgb(0, 0, 0);
-      text-shadow: 6px 3px 8px rgba(0,0,0,0.5);
+      color:rgb(223, 223, 223);
+      text-shadow: 6px 3px 8px rgba(255, 255, 255, 0.75);
       transition: .5s;
       
   }
   a:hover {
-      color: #fffffff3;
-      text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+      color: #28d0e6f3;
+      text-shadow: 3px 2px 4px rgba(255, 255, 255, 0.75);
       transition: .25s;
+
   }
   a:active {
-      color: rgb(52, 139, 231);
-      text-shadow: 0px 0px 3px rgb(0, 0, 0);
+      color: #2a3169f3;
+      text-shadow: 0px 0px 3px rgb(255, 255, 255);
       transition: .25s;
   }
   button {
@@ -136,10 +160,11 @@ hr.gradient-2 {
       color: #28d0e6f3;
       text-shadow: 3px 2px 4px rgba(255, 255, 255, 0.75);
       transition: .25s;
+
   }
   a:active {
       color: #2a3169f3;
-      text-shadow: 0px 0px 4px rgb(255, 255, 255);
+      text-shadow: 0px 0px 3px rgb(255, 255, 255);
       transition: .25s;
   }
   button {
