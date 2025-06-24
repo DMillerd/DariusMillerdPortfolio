@@ -42,7 +42,9 @@ const Projects_card = () => {
                 </ul>
                 <h3>Demo video</h3>
                 <div className="demovideo">
-                    <p>Demo video in production!</p>
+                    <iframe width="960" height="540"
+                    src="https://www.youtube.com/embed/bgixueIm7kA">
+                    </iframe>
                 </div>
             </div>
             <div>
