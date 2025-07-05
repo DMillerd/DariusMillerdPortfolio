@@ -83,6 +83,14 @@ ul{
   padding: 3px;
   width: auto;
 }
+.resume-photo {
+  border-radius: 25px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  padding: 3px;
+  width: auto;
+}
 hr.gradient-2 {
     height: 3px;
     border: none;
